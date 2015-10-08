@@ -1,0 +1,19 @@
+<pre>{{ctrl.step | json}}</pre>
+<form ng-submit="ctrl.save()" name="ctrl.stepForm" novalidate>
+	<ul>
+		<li>
+			<label for="name">Name *</label>
+			<input ng-model="ctrl.step.name" type="text" name="name" id="name" required>
+		</li>
+		<li>
+			<label for="desc">Description</label>
+			<textarea ng-model="ctrl.step.description" name="description" id="desc"></textarea>
+		</li>
+		<li>
+			<label for="start">start</label>
+			<input type="checkbox" name="start" id="start">
+		</li>
+		<button type="submit">Save</button>
+		<button type="button" ng-click="ctrl.delete()">Delete</button>
+	</ul>
+</form>
